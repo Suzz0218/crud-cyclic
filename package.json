@@ -2,7 +2,7 @@
   "name": "postol",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.ejs",
   "scripts": {
     "dev": "SET NODE_ENV=DEVELOPMENT& nodemon server.js",
     "prod": "SET NODE_ENV=PRODUCTION& nodemon server.js"
