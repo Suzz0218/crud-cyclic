@@ -1,0 +1,136 @@
+<%- include("layout/header") %>
+
+<div class="main main-height">
+  <% if (notify) { %>
+  <div class="box">
+    <div class="m_wrapper">
+      <div class="wrapper_modal">
+        <div class="wrapper_modal-dialog">
+          <div class="wrapper_modal-content">
+            <div class="wrapper_modal-body"><%= notify.message %></div>
+            <a href="/" class="btnc btnc-primary modal_btn">Refresh</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% } %>
+
+  <div class="container pb-20">
+    <div class="row">
+      <div class="col-lg-8 m-auto">
+        <div class="py-6">
+          <h1 class="py-4 fw-600">Leave your thoughts</h1>
+          <div class="m-auto">
+            <div class="py-2 bg-white title my-2 rounded shadow small">
+              <div class="container">
+                <div
+                  class="flex md-flex justify-content-space-between align-items-center"
+                >
+                  <div>Title</div>
+                  <div>Username</div>
+                </div>
+              </div>
+            </div>
+            <% if (articles !== null) { %>
+            <div>
+              <% articles.forEach(article => { %>
+              <div>
+                <div class="py-2 bg-white title my-2 rounded shadow small">
+                  <div class="container">
+                    <a
+                      href="article/<%= article._id %> "
+                      class="flex-index justify-content-space-between align-items-center"
+                    >
+                      <span><%= article.headLine %> </span>
+                      <span> <%= article.createdBy %> </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <% }) %>
+            </div>
+
+            <% } else {%>
+            <div class="py-2 bg-white title my-2 rounded shadow small">
+              <div class="container">
+                <div
+                  class="flex justify-content-space-between align-items-center"
+                >
+                  <span>Title</span>
+                  <span>Username</span>
+                </div>
+              </div>
+            </div>
+            <div class="py-2 bg-white title my-2 rounded shadow small">
+              <div class="container">
+                <div
+                  class="flex justify-content-space-between align-items-center"
+                >
+                  <span>Title</span>
+                  <span>Username</span>
+                </div>
+              </div>
+            </div>
+            <div class="py-2 bg-white title my-2 rounded shadow small">
+              <div class="container">
+                <div
+                  class="flex justify-content-space-between align-items-center"
+                >
+                  <span>Title</span>
+                  <span>Username</span>
+                </div>
+              </div>
+            </div>
+            <div class="py-2 bg-white title my-2 rounded shadow small">
+              <div class="container">
+                <div
+                  class="flex justify-content-space-between align-items-center"
+                >
+                  <span>Title</span>
+                  <span>Username</span>
+                </div>
+              </div>
+            </div>
+            <% } %>
+            <div class="py-2 bg-white title my-2 rounded shadow small">
+              <div class="container">
+                <div
+                  class="flex fw-600 justify-content-space-between align-items-center"
+                >
+                  <span>Team</span>
+                  <span>Postol</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <section class="py-2 section pt-4 bgc-primary">
+    <div class="container">
+      <% if (message) { %>
+      <div class="write">
+        <a href="/write/<%= message.user._id %> ">Write</a>
+      </div>
+      <% } else {%>
+      <div class="write">
+        <a href="/signup ">Write</a>
+      </div>
+      <% } %>
+      <div class="">
+        <h3 class="fs-18 fw-medium pb-2 text-center">
+          275 Bathurst St, Toronto, ON M5T 2S4
+        </h3>
+        <p class="fs-16 text-center mb-0">
+          &copy; Copyright 2022. All Rights Reserved by Postol.
+        </p>
+      </div>
+    </div>
+  </section>
+</footer>
+
+<%- include("layout/footer") %>

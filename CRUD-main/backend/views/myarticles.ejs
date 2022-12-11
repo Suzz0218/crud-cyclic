@@ -1,0 +1,91 @@
+<%- include("layout/header") %>
+
+<div class="main main-height">
+  <% if (notify) { %>
+  <div class="box">
+    <div class="m_wrapper">
+      <div class="wrapper_modal">
+        <div class="wrapper_modal-dialog">
+          <div class="wrapper_modal-content">
+            <div class="wrapper_modal-body"><%= notify.message %></div>
+            <a href="/" class="btnc btnc-primary modal_btn">Refresh</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% } %>
+
+  <div class="container pb-20 sub-height">
+    <div class="row">
+      <div class="col-lg-8 m-auto">
+        <div class="py-6">
+          <h1 class="py-4 fw-600">Leave your thoughts</h1>
+          <div class="m-auto">
+            <div class="py-2 bg-white title my-2 rounded shadow small">
+              <div class="container">
+                <div
+                  class="flex md-flex justify-content-space-between align-items-center"
+                >
+                  <div>Title</div>
+                  <div>Username</div>
+                </div>
+              </div>
+            </div>
+            <% if (articles !== null) { %>
+            <div>
+              <% articles.forEach(article => { %>
+              <div>
+                <div class="py-2 bg-white title my-2 rounded shadow small">
+                  <div class="container">
+                    <a
+                      href="/myarticle/<%= article._id %> "
+                      class="flex-index justify-content-space-between align-items-center"
+                    >
+                      <span><%= article.headLine %> </span>
+                      <% if (message) { %>
+                      <span>
+                        <%= article.user.fname +" " + article.user.lname%>
+                      </span>
+
+                      <% } else {%>
+                      <span> <%= article.createdBy %> </span>
+
+                      <% } %>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <% }) %>
+            </div>
+
+            <% } %>
+
+            <div class="py-2 bg-white title my-2 rounded shadow small">
+              <div class="container">
+                <div
+                  class="flex fw-600 justify-content-space-between align-items-center"
+                >
+                  <span>Team</span>
+                  <span>Postol</span>
+                </div>
+              </div>
+            </div>
+            <div class="btnc-position flex">
+              <span class="fw-600 mr-4">
+                You can also create articles from here.
+              </span>
+              <a
+                href="/write/<%= message.user._id %> "
+                class="btnc btnc-primary my-2"
+                >Write</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include("layout/footer") %>
