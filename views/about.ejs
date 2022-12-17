@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <%- include('partials/nav.ejs'); -%>
+        <%- include('partials/head.ejs', { title: title }); -%>
+            <div class="title">
+                <h1>
+                    <%= title %>
+                </h1>
+            </div>
+            <div class="wrapper-body"><span class="wrapper-body-accent">Thank you for visiting!</span></br></br>I am a UI/UX·product designer with solid design
+                background. I have been
+                working in the field for about 2 years as a UI/UX designer, graphic designer and marketing
+                designer. I earned a bachelor's degree in visual communication design and now I am studying
+                Multimedia Design and Developmetn at Humber College.</br></br>
+                <span class="wrapper-body-secondary">⬇︎ Please press expand ↙︎↗︎ button that appears on the right top on hover to take a closer look.</span>
+            </div>
+            <div class="wrapper-about">
+                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450"
+                    src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fn68lr0tzbtsfdWh3wxR4UC%2FSujin-Susie-Choi---CV%3Fpage-id%3D567%253A2%26node-id%3D567%253A13%26viewport%3D229%252C376%252C0.6%26scaling%3Dscale-down%26starting-point-node-id%3D567%253A13"
+                    allowfullscreen></iframe>
+            </div>
+
+            <%- include('partials/footer.ejs'); -%>
+</body>
+
+</html>

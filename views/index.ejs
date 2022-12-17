@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <%- include('partials/nav.ejs'); -%>
+        <%- include('partials/head.ejs', { title: title }); -%>
+            <div class="wrapper">
+                <div class="title">
+                    <span>
+                        <%= title %>
+                    </span>
+                </div>
+                <p class="intro"> <span class="intro-highlight">Hi, I am Susie</span><br>
+                    <span class="intro-body">Adventurous and loving person working in design.</br>I have mainly focused on growth in UI/UX, product
+                    design and graphic design.</span></p>
+            </div>
+
+            <div class="wrap">
+                <div class="row row-cols-1 row-cols-md-4 g-4" id="card">
+                    <div class="col">
+                        <div class="card h-100"><a href="/portfolio">
+                            <img src="https://freight.cargo.site/w/1500/q/75/i/05ef199b312ac29cadf9effdf8d54d4249373485b67ad4650eab60418b33eca8/Adriel-02.png"
+                                 class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">UX studies at Adriel</h5>
+                                <!-- <p class="card-text">Body text will be placed here.</p> -->
+                                <p class="mycomment">Studies that I carried out while working for Adriel</p>
+                            </div>
+                        </a></div>
+                    </div>
+                    
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://freight.cargo.site/w/1500/q/75/i/e33dad521eae5a1528b894ddab37a830ce1a0ec3f1b49e771ac9cf360e9c2909/Selfpromo.png"
+                                 class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Motion graphic project</h5>
+                                <!-- <p class="card-text">Body text will be placed here.</p> -->
+                                <p class="mycomment">Self-promotion video</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://freight.cargo.site/w/1500/q/75/i/0fd7f2018b16be032ef64892175f34c7cebf13bef5ebb13eed7c7f595c77d817/Thumbnail-vui.png"
+                                 class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">VUI project</h5>
+                                <!-- <p class="card-text">Body text will be placed here.</p> -->
+                                <p class="mycomment">VUI for visually impaired people</p>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://freight.cargo.site/w/1080/q/94/i/9dcdeb8ee731a2cf84fae5c05ebc8fb423268ee999ffd26cc86e27c254e007bd/Insa-01.png"
+                                 class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Title title</h5>
+                                <!-- <p class="card-text">Body text will be placed here.</p> -->
+                                <p class="mycomment">comments will be placed here</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <%- include('partials/footer.ejs'); -%>
+
+</body>
+
+</html>
